@@ -199,14 +199,6 @@ def calculateNumber(conn, conn2, startDate, interval, fun, fun2):
 def allPoints(lat, lon):
     return True
 
-def myCentrum(lat, lon):
-    bbPath = mplPath.Path(np.array([[52.246760, 20.957805],
-                     [52.216239, 20.980857],
-                     [52.221867, 21.035873],
-                     [52.247934, 21.018419],
-                     [52.256370, 20.981776]]))
-    return bbPath.contains_point((lat, lon))
-
 conn = sqlite3.connect("autobusyPiatek")
 conn2 = sqlite3.connect("tramwajePiatek")
 
