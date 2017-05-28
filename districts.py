@@ -7,14 +7,26 @@ Created on Sat May 27 22:02:55 2017
 
 import matplotlib.path as mplPath
 from PIL import Image, ImageDraw
+import numpy as np
+
+def allPoints(lat, lon):
+    return True
 
 def myCentrum(lat, lon):
     bbPath = mplPath.Path(np.array([[52.247130, 20.970801],
-                     [52.216132, 20.988162],
-                     [52.224426, 21.043774],
+                     [52.213549, 20.989464],
+                     [52.219056, 21.053315],
                      [52.247934, 21.018419],
                      [52.256370, 20.981776]]))
     return bbPath.contains_point((lat, lon))
+
+def notMyCentrum(lat, lon):
+    bbPath = mplPath.Path(np.array([[52.247130, 20.970801],
+                     [52.213549, 20.989464],
+                     [52.219056, 21.053315],
+                     [52.247934, 21.018419],
+                     [52.256370, 20.981776]]))
+    return not bbPath.contains_point((lat, lon))
 
 def wola(lat, lon):
     bbPath = mplPath.Path(np.array([[52.227485, 21.000983],
@@ -69,13 +81,13 @@ image = Image.open('mapa_warszawy.jpg')
 draw = ImageDraw.Draw(image)
 cm = converterMap()
 p1 = cm.getPosition(20.970801, 52.247130)
-p2 = cm.getPosition(20.988162, 52.216132)
-p3 = cm.getPosition(21.043774, 52.224426)
+p2 = cm.getPosition(20.989464, 52.213549)
+p3 = cm.getPosition(21.053315, 52.219056)
 p4 = cm.getPosition(21.018419, 52.247934)
 p5 = cm.getPosition(20.981776, 52.256370)
-draw.line((p1[0],p1[1], p2[0], p2[1]), fill=128, width=5)
-draw.line((p2[0],p2[1], p3[0], p3[1]), fill=128, width=5)
-draw.line((p3[0],p3[1], p4[0], p4[1]), fill=128, width=5)
-draw.line((p4[0],p4[1], p5[0], p5[1]), fill=128, width=5)
-draw.line((p5[0],p5[1], p1[0], p1[1]), fill=128, width=5)
-image.show()
+draw.line((p1[0], p1[1], p2[0], p2[1]), fill=128, width=5)
+draw.line((p2[0], p2[1], p3[0], p3[1]), fill=128, width=5)
+draw.line((p3[0], p3[1], p4[0], p4[1]), fill=128, width=5)
+draw.line((p4[0], p4[1], p5[0], p5[1]), fill=128, width=5)
+draw.line((p5[0], p5[1], p1[0], p1[1]), fill=128, width=5)
+#image.save('myCentrum.bmp')
