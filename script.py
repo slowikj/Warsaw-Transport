@@ -199,10 +199,10 @@ def calculateNumber(conn, conn2, startDate, interval, fun, fun2):
 def allPoints(lat, lon):
     return True
 
-conn = sqlite3.connect("autobusyPiatek")
-conn2 = sqlite3.connect("tramwajePiatek")
+conn = sqlite3.connect("autobusySobota")
+conn2 = sqlite3.connect("tramwajeSobota")
 
-#calculateLines(conn, conn2, myCentrum, allPoints)
+calculateLines(conn, conn2, myCentrum, allPoints)
 
 
         
