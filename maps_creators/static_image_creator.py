@@ -36,7 +36,8 @@ def create_static_line_images_from_db(db_con,
                     line_images[line] = du.get_static_image_drawing_data(background_image_path)
                 
                 du.set_point_on_static_image(cm, longitude, latitude, line_images[line][0], "blue", 3)
-            except Exception:
+            except Exception as e:
+                print(e)
                 pass
             
     return line_images

@@ -6,16 +6,24 @@ Created on Mon May 29 08:28:29 2017
 """
 
 from static_image_creator import *
+import sys
+import sqlite3
 
-def make_images(df):
-    unique_lines = df.loc[:, "Lines"].unique()
-    
-    for line in unique_lines:
-        print("try to process line: " + line)
-        
-        line_df = df.loc[df.Lines == line, :]
-        if len(line_df) > 5:
-            create_offline_image_from_data_frame(line + ".png", line_df,
-                                                 "mapa_warszawy.jpg",
-                                                 1280, 810)
-            print(line + " done")
+if len(sys.argv) != 3:
+    print("arguments:")
+    print("db path")
+    print("background image path")
+else:
+    db_path, background_image_path = sys.argv[1:]
+    lines_routes_dict = create_static_line_images_from_db(sqlite3.connect(db_path),
+                                                          background_image_path,
+                                                          1280, 810)
+     
+    print(len(lines_routes_dict))                                                     
+    for line_name, image_tuple in lines_routes_dict.items():
+        try:
+            print(line_name + " START")
+            image_tuple[1].save("./line_routes/" + line_name + ".png")
+            print(line_name + " DONE")
+        except:
+            print("an error during saving " + line_name)

@@ -6,7 +6,7 @@ Created on Mon May 29 08:03:32 2017
 """
 
 import PIL.Image
-from PIL import ImageDraw, Image
+import PIL.ImageDraw
 from tkinter import *
 import conversion_utils as cu
 
@@ -69,8 +69,8 @@ def set_point_on_static_image(cm, longitude, latitude, draw, point_color, point_
     
 
 def get_static_image_drawing_data(background_image_path):
-    image = Image.open(background_image_path)
-    draw = ImageDraw.Draw(image)
+    image = PIL.Image.open(background_image_path)
+    draw = PIL.ImageDraw.Draw(image)
     
     return (draw, image)
     
