@@ -34,6 +34,10 @@ def create_animated_image_from_db(bus_con, tram_con,
             canvas.create_image(image_width / 2, image_height / 2, image=photo)
             du.set_points_on_canvas(cm, bus_json_array, canvas, root, "blue")
             du.set_points_on_canvas(cm, tram_json_array, canvas, root, "red")
+            
+            (hours, minutes, seconds) = get_time(int(bus_row[0]) * 30)
+            txt = "{:02}:{:02}:{:02}".format(hours, minutes, seconds);            
+            canvas.create_text(70,30, text=txt, font="Times 25 bold")
 
             time.sleep(0.01)
             
@@ -43,6 +47,13 @@ def create_animated_image_from_db(bus_con, tram_con,
             break
     
     root.mainloop()        
+    
+def get_time(full_seconds):
+    hours = int(full_seconds / (60 * 60))
+    minutes = int(full_seconds / 60) % 60
+    seconds = (full_seconds % 60)
+    
+    return (hours, minutes, seconds)
 
 if len(sys.argv) != 4:
     print("arguments:")
