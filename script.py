@@ -95,7 +95,7 @@ def calculateScoresMinAvgMax(conn, fun):
             prevList = data['result']
         else:
             times += 1
-            if(times % 2 != 0):
+            if(times % 5 != 0):
                 continue
             try:
                 currList = data['result']
@@ -159,7 +159,7 @@ def calculateLineAvgMax(conn, fun):
                 lineAvgMax(prevList, currList, fun, dictionary)
                 prevList = currList
             except:
-                
+                2
             
     return dictionary
             
@@ -173,7 +173,8 @@ def calculateLines(conn, conn2, fun, fun2):
     'Max' :  pd.Series([el.maxV for el in values], lines)}
     df1 = pd.DataFrame(ds1)
     
-    print(df1.sort(['Avg'], ascending=[0]))
+    print(df1.sort_values(by='Avg', ascending=False))
+    
     
     return 0
 
@@ -227,15 +228,18 @@ def calculateNumber(conn, conn2, startDate, interval, fun, fun2, lred, lblue, fi
     return 0
     
 def clearScores(scores1, scores2, listTime):
-    if(len(scores1) == len(scores2)):
-        for i in range(len(scores1)):
-            if(i >= len(scores1)):
-                break
-            if(scores1[i] < 0 or scores2[i] < 0):
-                del scores1[i]
-                del scores2[i]
-                del listTime[i]
-                i -= 1
+    if(len(scores1) != len(scores2)):
+        while(len(scores2) != len(scores1)):
+            scores2.pop()
+        
+    for i in range(len(scores1)):
+        if(i >= len(scores1)):
+            break
+        if(scores1[i] < 0 or scores2[i] < 0):
+            del scores1[i]
+            del scores2[i]
+            del listTime[i]
+            i -= 1
                 
 def calculateAvg4(conn, startDate, interval, fun, fun2, fun3, fun4, lred, lblue, lyellow, lgreen, file):
     scores = calculateScoresMinAvgMax(conn, fun)
@@ -316,10 +320,6 @@ def createTable():
     conn = sqlite3.connect("autobusySobota")
     conn2 = sqlite3.connect("tramwajeSobota")
     calculateLines(conn,conn2, allPoints, allPoints)
-
-
-
-
 
 
 
