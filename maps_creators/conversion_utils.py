@@ -33,6 +33,7 @@ class converterMap:
         y = self.height - (lat - self.y1) / (self.y2 - self.y1) * self.height
         return (x,y)
 
+# SLOW; not recommended
 def get_dataframe_from_db(db_name, table_name, json_column_names,
                           start_req_ind, end_req_ind):
     with sqlite3.connect(db_name) as con:
@@ -57,5 +58,4 @@ def get_dataframe_from_db(db_name, table_name, json_column_names,
                 df.loc[len(df)] = json_item
 
     return df
-
 
