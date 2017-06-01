@@ -20,8 +20,9 @@ def get_most_frequent_lines_per_hour(input_df):
 
 
 if len(sys.argv) != 2:
-	print("arguments:")
-	print("csv dataset path")
+#	print("arguments:")
+#	print("csv dataset path")
+	pass
 else:
 	csv_path = sys.argv[1]
 	print(get_most_frequent_lines_per_hour(pd.read_csv(csv_path)))

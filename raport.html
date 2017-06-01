@@ -11797,10 +11797,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>W dniach 27.05.2017 (sobota) i 28.05.2017 (poniedziałek) zbieraliśmy dane na temat tramwaji i autobusów online. Zapytania wysyłaliśmy cały dzień co 30 s.
-    Dane były pobierane przez serwis dane po warszawsku, który udostepniał serwer Api. Do pobierania i deserializowania wykorzystaliśmy pakiety: request i json w python.
-    W poniższym raporcie przedstawimy prędkości komunikacji miejskiej, a także jej zagęszczenie. Sprawdzimy, w jakich dzielnicach komunikacja działa najsprawniej, a także porównamy ilość tramwaji do autobusów.
-    Niestety czasami dostaliśmy dane zaburzone... coś by tu napisać o tym</p>
+<p>Dane dotyczące warszawskiej sieci komunikacyjnej zostały zebrane w trybie on-line w dniach 27.05.2017 (sobota) i 28.05.2017 (poniedziałek). Dzięki portalowi „Dane po warszawsku”, który udostępniał serwer Api, możliwe było pobranie materiału dotyczącego transportu miejskiego. Zapytania do serwera były generowane przez całe dwa dni co 30 sekund. Do pobierania i deserializowania danych wykorzystane zostały pakiety Request i Json w Python. Niniejszy Raport stanowi prezentację informacji publicznych na temat prędkości pojazdów komunikacji warszawskiej, ich zagęszczenia z podziałem na środek transportu (autobus vs tramwaj) i porę dnia w centrum miasta oraz wybranych dzielnicach. Należy przyznać, iż niektóre otrzymane dane były nieczytelne, co było najczęściej wynikiem wad systemu bądź oddziaływania niezależnych czynników zewnętrznych.</p>
 
 </div>
 </div>
@@ -11837,7 +11834,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie</center>
+<center>Prędkość średnia w Warszawie</center>
 </div>
 </div>
 </div>
@@ -11856,7 +11853,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, ścisłe centrum</center>
+<center>Prędkość średnia w Warszawie, ścisłe centrum</center>
 </div>
 </div>
 </div>
@@ -11885,7 +11882,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, poza centrum</center>
+<center>Prędkość średnia w Warszawie, poza centrum</center>
 </div>
 </div>
 </div>
@@ -11904,7 +11901,9 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> Z przeprowadzonej analizy danych dotyczących ogólnej średniej prędkości pojazdów miejskich wynika, że autobusy miejskie posiadają niewiele wyższą średnią prędkość od tramwajów w godzinach 8:00 – 20:00. Największe zauważalne różnice odnotowano w godzinach nocnych. Podczas gdy, średnia prędkość autobusów była wyższa w nocy niż w dzień, kursowania tramwajów nie odnotowano.</p>
+<p>W ścisłym centrum miasta zauważono, iż średnia prędkość tramwajów jest znacznie wyższa od autobusów w ciągu dnia. W nocy, po godzinie 2:00 nie odnotowano ruchu tramwajów. Zauważono natomiast znaczne wahania średniej prędkości autobusów nocnych.
+Inaczej sytuacja prezentuje się na pozostałych obszarach miasta. Autobusy poruszają się szybciej od tramwajów. Średnia prędkość tramwajów na trasach znajdujących się poza centrum jest znacznie niższa niż w centrum. Również nie odnotowano kursowania nocnych tramwajów. Natomiast autobusy na tym terenie nocą poruszają się znacznie szybciej niż w ciągu dnia.</p>
 
 </div>
 </div>
@@ -11914,7 +11913,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Przedstawienie prędkości dla każdej lini</center>
+<center>Przedstawienie prędkości dla każdej linii</center>
 </div>
 </div>
 </div>
@@ -12015,7 +12014,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> Powyższe wnioski potwierdza szczegółowe przedstawienie średniej prędkości dla każdej linii komunikacyjnej. Średnia prędkość autobusów jest wyższa w nocy niż dzień. Średnia prędkość dla obu środków transportów jest zbliżona.</p>
 
 </div>
 </div>
@@ -12148,7 +12147,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> W analizie uwzględniono następujące dzielnice Warszawy: Wola, Mokotów, Ursynów, Białołęka. Na Woli i Mokotowie odnotowano zbliżone średnie prędkości środków komunikacji miejskiej, przy czym, w pierwszej analizowanej dzielnicy tramwaje jeżdżą nieco szybciej niż autobusy. Zaś na Mokotowie, autobusy posiadają nieco wyższą średnią prędkość. W obu przypadkach nie odnotowano nocnego kursowania tramwajów. Co ważne, w przypadku ruchu nocnych autobusów zauważono wyższą średnią prędkość niż wśród dziennych, przy czym na Woli średnia prędkość nocnych autobusów osiągała około 35 km/h. Największe różnice w kursowaniu autobusów i tramwajów występują na dwóch pozostałych obszarach. Zwraca uwagę niska średnia prędkość tramwajów na poziomie około 15 km/h oraz duże wahania ruchu autobusów nocnych, wśród których maksymalna prędkość dochodziła nawet do 40 km/h na Białołęce. Z wykresów prezentujących porównanie danych wysuwa się ciekawy wniosek wskazujący na fakt, że średnia prędkość autobusów na Woli należy do jednych z najniższych, zaś tramwajów – do jednych z najwyższych.</p>
 
 </div>
 </div>
@@ -12176,7 +12175,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Zagęszczenie w Warszwie</center>
+<center>Zagęszczenie w Warszawie</center>
 </div>
 </div>
 </div>
@@ -12195,7 +12194,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Zagęszczenie w Warszwie, ścisłe centrum</center>
+<center>Zagęszczenie w Warszawie, ścisłe centrum</center>
 </div>
 </div>
 </div>
@@ -12214,7 +12213,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Zagęszczenie w Warszwie, poza centrum</center>
+<center>Zagęszczenie w Warszawie, poza centrum</center>
 </div>
 </div>
 </div>
@@ -12233,7 +12232,8 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> Analiza danych dotyczących zagęszczenia pojazdów transportu miejskiego wyraźnie wskazuje na dominację autobusów, których liczba sięga ponad 700 w ciągu dnia (w porównaniu do tramwajów, których jest niecałe 200). W porach nocnych znacznie mniej autobusów oraz tramwajów można zobaczyć na warszawskich ulicach.</p>
+<p>Co ważne, w samym ścisłych centrum Warszawy kursuje sześciokrotnie mniej autobusów oraz tramwajów niż na pozostałych terenach.</p>
 
 </div>
 </div>
@@ -12366,7 +12366,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> Mimo, iż na Woli występuje dwukrotnie mniej autobusów niż na Mokotowie, to liczba kursujących tam tramwajów jest najwyższa na tle pozostałych wybranych dzielnic. Najmniejszą liczbę autobusów odnotowano na Białołęce, a tramwajów na Ursynowie. W godzinach nocnych zaobserwowano zbliżoną (niewielką) liczbę środków transportu w poszczególnych dzielnicach.</p>
 
 </div>
 </div>
@@ -12394,7 +12394,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie</center>
+<center>Prędkość średnia w Warszawie</center>
 </div>
 </div>
 </div>
@@ -12413,7 +12413,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, ścisłe centrum</center>
+<center>Prędkość średnia w Warszawie, ścisłe centrum</center>
 </div>
 </div>
 </div>
@@ -12432,7 +12432,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, poza centrum</center>
+<center>Prędkość średnia w Warszawie, poza centrum</center>
 </div>
 </div>
 </div>
@@ -12451,7 +12451,8 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> W ciągu dnia można zaobserwować zbliżoną średnią prędkość pojazdów bez dominacji któregokolwiek. Co ciekawe, nie zauważono ruchu tramwajów nie tylko nocą, ale także między godziną 21:00 a 22:00. 
+W ścisłym centrum miasta zauważalna jest niewiele wyższa średnia prędkość tramwajów w ciągu dnia. W nocy widoczne są duże wahania prędkości autobusów. Poza centrum miasta, nieco szybciej jeżdżą autobusy, które nocą osiągają znacznie wyższe prędkości niż w dzień.</p>
 
 </div>
 </div>
@@ -12479,7 +12480,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie</center>
+<center>Prędkość średnia w Warszawie</center>
 </div>
 </div>
 </div>
@@ -12498,7 +12499,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, ścisłe centrum</center>
+<center>Prędkość średnia w Warszawie, ścisłe centrum</center>
 </div>
 </div>
 </div>
@@ -12517,7 +12518,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, poza centrum</center>
+<center>Prędkość średnia w Warszawie, poza centrum</center>
 </div>
 </div>
 </div>
@@ -12536,7 +12537,8 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> W ciągu dnia można zaobserwować zbliżoną średnią prędkość pojazdów bez dominacji któregokolwiek. Co ciekawe, nie zauważono ruchu tramwajów nie tylko nocą, ale także między godziną 21:00 a 22:00. 
+W ścisłym centrum miasta zauważalna jest niewiele wyższa średnia prędkość tramwajów w ciągu dnia. W nocy widoczne są duże wahania prędkości autobusów. Poza centrum miasta, nieco szybciej jeżdżą autobusy, które nocą osiągają znacznie wyższe prędkości niż w dzień.</p>
 
 </div>
 </div>
@@ -12555,7 +12557,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie</center>
+<center>Prędkość średnia w Warszawie</center>
 </div>
 </div>
 </div>
@@ -12574,7 +12576,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, poza centrum</center>
+<center>Prędkość średnia w Warszawie, poza centrum</center>
 </div>
 </div>
 </div>
@@ -12593,7 +12595,7 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Prędkość średnia w Warszwie, poza centrum</center>
+<center>Prędkość średnia w Warszawie, poza centrum</center>
 </div>
 </div>
 </div>
@@ -12612,10 +12614,1706 @@ REZ/C93    3.087798  94.579491
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Wnioski:</strong></p>
+<p><strong>Wnioski:</strong> Analiza porównawcza średniej prędkości pojazdów komunikacji miejskiej pokazuje, że pojazdy nieco szybciej poruszały się w sobotę, zwłaszcza poza centrum miasta. Autobusy rano wolniej poruszaly się w poniedziałek, spewność jest to spowodowanę faktem, że ludzie jadą do pracy. Wieczorem zaś okazuje się, że autobusy w sobotę poruszają się wolniej. Przyczyną może być to, e jest to dzień wolny i więcej ludzi wychodzi wieczorem miło spędzić czas. Natomiast, w przypadku tramwajów obserwuje się zbliżoną prędkość w porównywanych dniach.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.-Kszta&#322;ty-wybranych-linii-autobusowych-i-tramwajowych">4. Kszta&#322;ty wybranych linii autobusowych i tramwajowych<a class="anchor-link" href="#4.-Kszta&#322;ty-wybranych-linii-autobusowych-i-tramwajowych">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Napisaliśmy skrypt (<code>static_image_creator.py</code>), który na podstawie pobranych danych na temat położenia autobusów i tramwajów generuje dla każdej linii osobne mapki, z których można odczytać, gdzie autobus/tramwaj wybranej linii się znajdował. Jako że dane nanoszone na mapkę były z całego dnia, to gęstość zaznaczonych punktów jest na tyle duża, że jesteśmy w stanie zauważyć kształt konkretnej linii.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Z otrzymanych map tras można odczytać, że niektóre trasy były objazdami tj. nie każdy autobus danej linii przejeżdżał
+przez dany odcinek. Bowiem w tych właśnie miejscach gęstość "kropek" jest znacznie mniejsza.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Porównaliśmy kształty tras dla danych linii z soboty i poniedziałku. Większość sobotnich tras różni się
+od tras poniedziałkowych. Jednakże istnieją również linie, dla których kształt trasy nie ulega zmianie.
+Poniżej znajdują się dwa przykłady (pierwszy: różne trasy sobotnie/poniedziałkowe, drugi: takie same)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 162 (poniedziałek):</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="162_poniedzialek.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 162 (sobota)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="162_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 27 (poniedziałek)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="27_poniedzialek.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 27 (sobota)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="27_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4.1-Ciekawe-wzory-tras">4.1 Ciekawe wzory tras<a class="anchor-link" href="#4.1-Ciekawe-wzory-tras">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Większość wzorów linii autobusowych i tramwajowych jest podobna do "tasiemek", węży lub innych, zwykłych krzywych. Jednakże znaleźliśmy kilka linii, których wzory tras są wyjątkowo ciekawe i zdecydowanie mogą rozbudzić kreatywność czytelka. Poniżej każdej z zaprezentowanych tras znajdują się nasze propozycje interpretacji tych wzorów.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia numer 1 (trasa poniedziałkowa)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/1_poniedzialek.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Proponujemy obrócić głowę o 90 stopni. Wówczas można zauważyć na powyższej mapce: zaciśniętą pięść, wieloryba z otwartą
+szczęką, czy też człowieka w czapce z daszkiem.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia numer 207 (trasa sobotnia)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/207_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>W tym przypadku można zauważyć: nauszniki lub zestaw słuchawkowy wraz z mikrofonem</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia numer 218 (trasa sobotnia)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/218_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tutaj możemy zauważyć głowę psa lub krokodyla</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 23 (trasa sobotnia)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/23_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Na powyższym obrazku można dostrzec "dwuząb" (czy też wyszczerbiony widelec) lub ogon diabła</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 509 (trasa poniedziałkowa)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/509_poniedzialek.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Na powyższej mapce możemy zauważyć odkurzacz</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 517 (trasa sobotnia)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/517_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Warto zwrócić uwagę na kształt trasy znajdującej się po prawobrzeżnej stronie Wisły: możemy tam dostrzec np. głowę węża.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia numer 716 (trasa sobotnia)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/716_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Na powyższej mapce możemy zauważyć wspinającego lub czołgającego się człowieka</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia 155 (trasa sobotnia)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/155_sobota.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tutaj można zauważyć ślimaka</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Linia numer 154 (trasa poniedziałkowa)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="maps_creators/chosen_routes/154_poniedzialek.png" alt="Alt Text"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Wystarczy przechylić głowę, aby zauważyć czołg</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="5.-Inne-mapy-wygenerowane-na-podstawie-pobranych-danych">5. Inne mapy wygenerowane na podstawie pobranych danych<a class="anchor-link" href="#5.-Inne-mapy-wygenerowane-na-podstawie-pobranych-danych">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Oprócz "statycznych map" zaprezentowanych w poprzednim punkcie, stworzyliśmy również dwa skrypty:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>online_image_creator.py</code> - pobiera dane z API co 10 sekund i wyświetla na mapie aktualne położenie tramwajów i autobusów</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>animated_image_creator.py</code> - dla danej bazy danych (położenie autobusów i tramwajów w ciągu całego dnia) generuje przyspieszoną symulację ruchu</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="6.-Najliczniejsze-linie-dla-ka&#380;dej-godziny">6. Najliczniejsze linie dla ka&#380;dej godziny<a class="anchor-link" href="#6.-Najliczniejsze-linie-dla-ka&#380;dej-godziny">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">find_most_frequent_lines_per_hour</span> <span class="k">as</span> <span class="nn">ff</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dla danych sobotnich (autobusy):</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_autobusy_sobota</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;csv_datasets/autobusySobota.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ff</span><span class="o">.</span><span class="n">get_most_frequent_lines_per_hour</span><span class="p">(</span><span class="n">df_autobusy_sobota</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hour</th>
+      <th>mostFrequentLine</th>
+      <th>uniqueBrigades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>Z</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>N01</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>N02</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>N01</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>105</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>116</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>112</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>11</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>12</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>13</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>14</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>15</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>16</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>17</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20</td>
+      <td>116</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>21</td>
+      <td>112</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>22</td>
+      <td>509</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>23</td>
+      <td>509</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong> Wnioski </strong> Od około godziny 7-mej do 20-stej jest najwięcej składów dla pojedynczej linii. W trakcie dnia dominującą linią autobusową jest linia 1186, a w nocy, co raczej nie jest zaskakujące, linie nocne, których liczność składów jest taka sama</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dla danych sobotnich (tramwaje)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tramwaje_sobota</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;csv_datasets/tramwajeSobota.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ff</span><span class="o">.</span><span class="n">get_most_frequent_lines_per_hour</span><span class="p">(</span><span class="n">df_tramwaje_sobota</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hour</th>
+      <th>mostFrequentLine</th>
+      <th>uniqueBrigades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>9</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>9</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>9</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>9</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>9</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22</td>
+      <td>9</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23</td>
+      <td>9</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Wnioski</strong> W przypadku tramwajów "wygrywa" linia numer 9. Tak dużą liczbę tramwajów o północy można wytłumaczyć tym, że kończą one w tym okresie bieg.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dla danych poniedziałkowych (autobusy)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_autobusy_poniedzialek</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;csv_datasets/autobusyPoniedzialek.csv&quot;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ff</span><span class="o">.</span><span class="n">get_most_frequent_lines_per_hour</span><span class="p">(</span><span class="n">df_autobusy_poniedzialek</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[35]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hour</th>
+      <th>mostFrequentLine</th>
+      <th>uniqueBrigades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>105</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>N01</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>N01</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>N01</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>136</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>509</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>6</td>
+      <td>509</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>509</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>8</td>
+      <td>105</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>9</td>
+      <td>105</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10</td>
+      <td>105</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>11</td>
+      <td>105</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>12</td>
+      <td>190</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>13</td>
+      <td>190</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>14</td>
+      <td>105</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>15</td>
+      <td>105</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>16</td>
+      <td>105</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>17</td>
+      <td>105</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18</td>
+      <td>105</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19</td>
+      <td>105</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20</td>
+      <td>190</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>21</td>
+      <td>116</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>22</td>
+      <td>116</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>23</td>
+      <td>112</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong> Wnioski</strong> Można zauważyć, że w porównaniu z sobotnimi wynikami, jest większe zróżnicowanie najczęstszych linii oraz ich wartość jest większa w porównaniu z sobotą</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Dla danych poniedziałkowych (tramwaje)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_tramwaje_poniedzialek</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;csv_datasets/tramwajePoniedzialek.csv&quot;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ff</span><span class="o">.</span><span class="n">get_most_frequent_lines_per_hour</span><span class="p">(</span><span class="n">df_tramwaje_poniedzialek</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>hour</th>
+      <th>mostFrequentLine</th>
+      <th>uniqueBrigades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>9</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>9</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>9</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>9</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>9</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>9</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>9</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>9</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>9</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>9</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>9</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>9</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>9</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>9</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>9</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>9</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>9</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>9</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>9</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>9</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22</td>
+      <td>9</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23</td>
+      <td>9</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Wnioski</strong> W przypadku tramwajów nadal "faworytem" jest linia numer 9. Jednakże liczność różnych składów jest większa w poniedziałek niż w sobotę</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
